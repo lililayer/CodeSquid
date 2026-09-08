@@ -1,5 +1,5 @@
-Ink | 1, "Hello, world !", 15;
-Ink | 1, "What ?", 6;
-Observe | 0, "", 4; /* store 4 chars in "string3" */
-Ink | 1, string3, 15;
-Emerge | 0;
+ink | 1, "Hello, world !", 15;
+ink | 1, "What ?", 6;
+observe | 0, "", 4; /* store 4 chars in "string3" */
+ink | 1, string3, 15;
+emerge | 0;
