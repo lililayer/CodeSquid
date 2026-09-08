@@ -1,5 +1,5 @@
 ink | 1, "Hello, world !", 15;
 ink | 1, "What ?", 6;
-observe | 0, "", 4; /* store 4 chars in "string3", working on */
+observe | 0, "", 4; /* store 4 chars in "string3" from .data, working on */
 ink | 1, string3, 15;
 emerge | 0;
