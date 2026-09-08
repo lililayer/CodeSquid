@@ -265,16 +265,15 @@ class SystemCall:
 ### DEFINE SYSTEM CALLS TRADS HERE ###
 ######################################
 
-SystemCall("GetUID", EAX=24) # sys_getuid
-SystemCall("SetUID", EAX=23, EBX="int") # sys_setuid
-#SystemCall("", EAX=8, EBX="string", ECX="int") # sys_creat
-#SystemCall("", EAX=7, EBX="int", ECX="int", EDX="int") # sys_waitpid
-#SystemCall("", EAX=6, EBX="int") # sys_close
-#SystemCall("", EAX=5, EBX="string", ECX="int", EDX="int") # sys_open
-SystemCall("Ink", EAX=4, EBX="int", ECX="string", EDX="int") # sys_write : std, string, string_length
-SystemCall("Observe", EAX=3, EBX="int", ECX="string", EDX="int") # sys_read
-#SystemCall("", EAX=2, EBX="struct_pt_reg") # sys_fork
-SystemCall("Emerge", EAX=1, EBX="int") # sys_exit : exit_code
+SystemCall("getuid", EAX=24) # sys_getuid
+SystemCall("setuid", EAX=23, EBX="int") # sys_setuid
+SystemCall("create", EAX=8, EBX="string", ECX="int") # sys_creat
+SystemCall("close", EAX=6, EBX="int") # sys_close
+SystemCall("open", EAX=5, EBX="string", ECX="int", EDX="int") # sys_open
+SystemCall("ink", EAX=4, EBX="int", ECX="string", EDX="int") # sys_write : std, string, string_length
+SystemCall("observe", EAX=3, EBX="int", ECX="string", EDX="int") # sys_read
+SystemCall("mitose", EAX=2, EBX="struct_pt_reg") # sys_fork
+SystemCall("emerge", EAX=1, EBX="int") # sys_exit : exit_code
 
 def GetSystemCallByBase(base):
     for s in systemcalls:
