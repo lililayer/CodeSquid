@@ -1,0 +1,54 @@
+
+
+  	  ____  _   _ _   _ _   _ ___ _   _  ____   ____   ___  _   _ ___ ____    _____ 
+	 |  _ \| | | | \ | | \ | |_ _| \ | |/ ___| / ___| / _ \| | | |_ _|  _ \  |___ / 
+	 | |_) | | | |  \| |  \| || ||  \| | |  _  \___ \| | | | | | || || | | |   |_ \ 
+	 |  _ <| |_| | |\  | |\  || || |\  | |_| |  ___) | |_| | |_| || || |_| |  ___) |
+	 |_| \_\\___/|_| \_|_| \_|___|_| \_|\____| |____/ \__\_\\___/|___|____/  |____/ 
+                                                                                
+                                                                                   
+	                                   _ 
+	 _ __ ___   __ _ _ __  _   _  __ _| |
+	| '_ ` _ \ / _` | '_ \| | | |/ _` | |
+	| | | | | | (_| | | | | |_| | (_| | |
+	|_| |_| |_|\__,_|_| |_|\__,_|\__,_|_|
+                                     
+                                                                                   
+  Welcome to the sqd (RunningSquid) language manual :
+	
+	RunningSquid is a low-level programing language.
+	RunningSquid.py compiles sqd scripts on-the-fly into an assembler (Intel x86) program.
+	The compiled code is then placed into a file in a folder-container.
+	
+	Dev. note : binary code must be optimized to avoid cyber-attacks like buffer overflows
+	
+	Separators :
+	
+		space char, new line	separate keywords
+		|			pass value(s) into systemcall functions
+		,			separate values
+		;			end line
+		"			open/close string
+		/*			open comment
+		*/			close comment
+	
+	Systemcalls : 
+	
+			Used as : <Syscall> | <param1>, <param2>, <param3>;
+		
+		SYS_EXIT
+		Emerge <int (exit status)>
+		
+		SYS_READ
+		Observe <std (int)> <text ref (*string)> <length (int)>
+		
+		SYS_WRITE
+		Ink <std (int)> <text ref (*string)> <length (int)>
+		
+		SYS_SETUID
+		SetUID <uid (int)>
+		
+		SYS_GETUID
+		GetUID
+		
+		
